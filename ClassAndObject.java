@@ -190,3 +190,141 @@ System.out.print(generator2.nextInt(1000) + " ");
 
 }
  */
+
+
+
+
+
+
+
+ /*
+  * 
+import java.util.Date;
+
+public class Loan {
+
+// Data fields - loanAmount, numberOfYears, Date, interestRate
+private double annualInterestRate;
+private int numberOfYears;
+private double loanAmount;
+private Date loanDate;
+
+// Constructors
+/**
+* Default Constructor
+*/
+
+
+public Loan() {
+  this(2.5, 1, 1000);
+  }
+  
+  
+  /**
+  * Constructing a loan object with specified interest rate,
+  * number of years and loan amount
+  */
+  public Loan(double annualInterestRate, int numberOfYears, double loanAmount) {
+  this.annualInterestRate = annualInterestRate;
+  this.numberOfYears = numberOfYears;
+  this.loanAmount = loanAmount;
+  this.loanDate = new Date();
+  }
+  
+  // Getters and Setters
+  public double getAnnualInterestRate() {
+  return annualInterestRate;
+  }
+  
+  
+  public void setAnnualInterestRate(double annualInterestRate) {
+  this.annualInterestRate = annualInterestRate;
+  }
+  
+  
+  public double getLoanAmount() {
+  return loanAmount;
+  }
+  
+  
+  public void setLoanAmount(double loanAmount) {
+  this.loanAmount = loanAmount;
+  }
+  
+  
+  public int getNumberOfYears() {
+  return numberOfYears;
+  }
+  
+  
+  public Date getLoanDate() {
+  return loanDate;
+  }
+  
+  // Methods
+  /** Find monthly payment */
+  public double getMonthlyPayment() {
+  double monthlyInterestRate = annualInterestRate / 1200;
+  
+  double monthlyPayment = loanAmount * monthlyInterestRate / (1
+  - (1 / Math.pow(1 + monthlyInterestRate, numberOfYears * 12)));
+  
+  return monthlyPayment;
+  }
+  
+  
+  /**
+  * Find total payment
+  */
+  public double getTotalPayment() {
+  double totalPayment = getMonthlyPayment() * 12 * numberOfYears;
+  return totalPayment;
+  }
+  
+
+  */
+
+
+
+
+
+
+
+
+  /*
+   * 
+   * import java.util.Scanner;
+
+import oops.Loan;
+
+public class TestLoan {
+
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+
+// Create a Scanner
+Scanner input = new Scanner(System.in);
+
+// Enter the annual Interest Rate
+System.out.println("Enter annual interest rate (in percentage): ");
+double annualInterestRate = input.nextDouble();
+
+System.out.println("Enter number of years (integer): ");
+int numberOfYears = input.nextInt();
+
+// Enter a loan amount
+System.out.println("Enter loan amount or principal: ");
+double loanAmount = input.nextDouble();
+
+// Created a loan object here
+Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
+
+// Display the loan date, monthly payment and total payment
+System.out.printf("The loan created on %s\n" +
+"The monthly payment is %.2f\nThe total payment is %.2f\n",
+loan.getLoanDate().toString(), loan.getMonthlyPayment(),
+loan.getTotalPayment());
+}
+
+}
+   */
